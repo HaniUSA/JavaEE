@@ -1,0 +1,50 @@
+First Maven Project::  8/19/145
+--------------------
+
+-Create a maven project
+-ususally , you will not choose--> create a simple project since you will be using from 100's of archtype that are availble.
+- But, for training purposes, we will use the simple project and create everything from scratch.
+-THe GroupId---> package name ---. com.somthing.anotherthing
+-Artifact Id: any
+-Version : keep defualt---> 0.0.1 snapshot
+-Package :  we will choose war( web archi), note that jar is used to create liberaries
+-Name: Marketing name
+-Parent Project; if using any mosules. not in this case
+-Then add Spring framework: Right click--> spring tools --> add spring project nature
+-Recommended: Right click on JRE system Liberary - by defualt is 1.5  and change it to 
+ 1.8 version or latest installed one version. if you got an error because of facet , check the project properties for jre or jdk
+---right click project--> properties--> project facets--> choose the java version from dropdown
+-Notice ; the src/main/webapp is the public folder.
+-pom; project object model
+-Cleam the project to empty the targt folder.--> RC--. maven clean
+- Run as maven install 
+- if you ahve an error building because of the abscense of web.xml- because you don't use any predifend architype-
+ then you should create it manually as follow:
+  - go to src/main/webapp and RightClic and create new folder  WEB-INF, inside that folder add a file
+  xml file and name it web.xml
+  - open the file and edit it as follow:
+     =======================================================================
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+
+    <display-name>Maven First Enterprise App</display-name>
+
+
+  <welcome-file-list>
+
+     <welcome-file> index.jsp </welcome-file>
+
+  </welcome-file-list>
+
+</web-app>   
+================================================================================
+ Then create index.jsp  - default- inside the webapp 
+-then run as maven clean then as maven install OR Right click on project -->maven build... --> goals: clean install  then apply run
+-Then: a .war file shold be in user folder under .m2 / repository/com/...
+-To test its deployment: run tomcat-- goto local host --- manger --- you should be seen it and 
+if you click on it it should run.
+======================================DONE==============================

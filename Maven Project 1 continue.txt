@@ -1,0 +1,13 @@
+Maven Project 1 continue:
+---------------------------Dependency, Configure the Server
+---------------------------Adding Liberaries: Hiberante, sping, loging liberaries, webflaw sec, java faces,..etc
+---------------------------We will add all of these by using Maven that will facilate it alot !
+
+
+---download orcal drive ojdbc14.jar  from oracle website or from https://code.google.com/p/jee-tutorial-youtube/downloads/detail?name=ojdbc14.jar&can=2&q=
+---add requiered dependices to pom.xml from  https://code.google.com/p/jee-tutorial-youtube/source/browse/trunk/j2eeapplication/pom.xml
+
+install orcall drive afetr download by navigating to downloaded folder and from cmd do:
+
+
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.1.0 -Dpackaging=jar -Dfile=ojdbc14.jar -DgeneratePom=true
